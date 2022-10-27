@@ -1,0 +1,174 @@
+/* configuración global */
+/* declarar unas constantes en colores y fuente */
+/* el root es la raíz de todo, para hacer las configuraciones repetitivas. Acá se declaran las 'variables' con los valores respectivos. Luego, simplemente se invoca la 'variable' con la palabra 'var' y entre paréntesis se elige el párametro que se establece en el 'root' */
+:root{
+    /* fuentes */
+    --titulos:'Lato', sans-serif;
+    --parrafo:'Roboto', sans-serif;
+    /* colores base */
+    --encabezado:rgb(81, 16, 16);
+    --pie:#000;
+    --enlace:#fff;
+    --enlaceSobre:#d1911a;
+
+
+}
+
+/*Títulos */
+h1,h2,h3,h5,h6 {
+    font-family: var(--titulos);
+    text-align: center;
+}
+
+/*Esto se utiliza para evitar 'desbordamiento' (como para que la información no se pierda cuando se pone junto a otros elementos). El asterisco (*) es el selector universal, para seleccionar todo pues*/
+
+* {
+    box-sizing: border-box;
+}
+
+/*Para utilizar un selector de una clase entera hay que usar un punto (.) y el nombre de la clase. Esto entonces va a afectar a todas las etiquetas con tal clase en el html del index.*/
+
+.home-wrapper {
+    background-image: url('../images/categorias/book2.jpg');
+    background-size: cover;
+
+}
+
+header {
+    width: 100%;
+    /*Para que la posición quede fija*/
+    position: fixed;
+    background-color: var(--encabezado);
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+header img {
+    width: 200px;
+}
+
+header nav {
+    float: right;
+    margin-top: 5px;
+}
+
+header nav a {
+    color: var(--enlace);
+    font-family: var(--titulos);
+    text-decoration: none;
+    /*Puede ser 700 en lugar de la palabra 'bold'*/
+    font-weight: bold;
+    margin-left: 2px;
+    padding: 5px 8px;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    color: var(--enlaceSobre);
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Esta es la sección del 'Home'*/
+
+/*Para hacer referencia a un Id se utiliza el numeral (#). Esto va entonces a modificar a la etiqueta que tenga el Id respectivo*/
+
+#home {
+    padding: 150px 0 260px;
+    text-align: center;
+}
+
+#home h1 {
+    color:rgb(9, 9, 9);
+    font-weight: 700;
+    font-size: 3.8rem;
+    margin-bottom: 35px;
+}
+
+#home p {
+    font-family: var(--parrafo);
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/*Sección de novedades*/
+
+#Novedades .box {
+    display: inline-block;
+    /*Para dividir el ancho en tres*/
+    width: 33%;
+    padding: 8px;
+}
+
+#Novedades .box p {
+    text-align: justify;
+}
+
+#Novedades .box img {
+    padding-left: 30%;
+    padding-bottom: 10px;
+}
+
+#Novedades .box h3 {
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+/*Sección de Categoría*/
+
+section {
+    padding-top: 80px;
+}
+
+#Categoría .box {
+    display: inline-block;
+    width: 33%;
+    padding: 5px;
+}
+
+#Categoría .box img {
+    width: 100%;
+}
+
+#Categoría .box h3 {
+    padding-top: 10px;
+}
+
+#Contacto {
+    width: 100%;
+    background-image: url('../images/map-image.png');
+    background-color: #000;
+    background-size: cover;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+#Contacto h2 {
+    color: #fff;
+}
+
+#Contacto input,
+select, textarea {
+    width:600px;
+    padding: 10px 5px;
+    font-family: var(--parrafo);
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--pie);
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+
+
